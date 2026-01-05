@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | For You Gift Shop</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff', // Sky blue bg
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky Blue accent
+                            900: '#0c4a6e', // Dark blue text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="text-slate-800 bg-slate-50">
+
+    <!-- Navbar Reused -->
+    <nav class="fixed w-full z-50 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center relative">
+                    <div class="absolute -left-4 -top-4 w-24 h-24 bg-brand-100 rounded-full blur-2xl opacity-70 -z-10">
+                    </div>
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="brand-logo.png" alt="Logo" class="h-12 w-12 object-contain rounded-lg shadow-sm">
+                        <div class="flex flex-col">
+                            <span class="font-heading font-bold text-xl text-slate-900 tracking-tight leading-none">For
+                                You</span>
+                            <span class="font-heading font-normal text-sm text-slate-600 tracking-wide">Gift Shop</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-900 font-medium transition-colors">Shop All</a>
+                    <a href="cart.html" class="relative text-slate-600 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-bag-shopping text-xl"></i>
+                        <span id="cart-count"
+                            class="absolute -top-2 -right-2 bg-rose-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform scale-0 transition-transform duration-300">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Sidebar / Filters -->
+            <aside class="w-full md:w-64 flex-shrink-0">
+                <div class="sticky top-24">
+                    <h2 class="text-xl font-bold font-serif mb-6">Categories</h2>
+                    <div class="space-y-2 flex flex-col">
+                        <button
+                            class="category-filter text-left px-4 py-3 rounded-lg bg-brand-500 text-white font-medium transition-all shadow-sm"
+                            data-category="all">
+                            All Products
+                        </button>
+                        <button
+                            class="category-filter text-left px-4 py-3 rounded-lg bg-white text-slate-600 hover:bg-brand-50 hover:text-brand-600 font-medium transition-all shadow-sm"
+                            data-category="giftboxes">
+                            <i class="fa-solid fa-gift mr-2 w-5"></i> Gift Boxes
+                        </button>
+                        <button
+                            class="category-filter text-left px-4 py-3 rounded-lg bg-white text-slate-600 hover:bg-brand-50 hover:text-brand-600 font-medium transition-all shadow-sm"
+                            data-category="flowers">
+                            <i class="fa-solid fa-fan mr-2 w-5"></i> Flowers
+                        </button>
+                        <button
+                            class="category-filter text-left px-4 py-3 rounded-lg bg-white text-slate-600 hover:bg-brand-50 hover:text-brand-600 font-medium transition-all shadow-sm"
+                            data-category="chocolates">
+                            <i class="fa-solid fa-candy-cane mr-2 w-5"></i> Chocolates
+                        </button>
+                        <button
+                            class="category-filter text-left px-4 py-3 rounded-lg bg-white text-slate-600 hover:bg-brand-50 hover:text-brand-600 font-medium transition-all shadow-sm"
+                            data-category="teddybears">
+                            <i class="fa-solid fa-paw mr-2 w-5"></i> Teddy Bears
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <div class="flex-1">
+                <div class="flex justify-between items-center mb-8">
+                    <h1 class="text-2xl font-bold text-slate-800">All Collections</h1>
+                    <!-- Sort could go here -->
+                </div>
+
+                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Products will be injected here by JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

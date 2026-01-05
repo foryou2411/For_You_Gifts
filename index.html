@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You | Premium Gift Shop</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&family=Prata&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff', // Sky blue bg
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky Blue accent
+                            900: '#0c4a6e', // Dark blue text
+                        },
+                        accent: '#e1ad01', // Gold/Yellow hint if needed
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Prata', 'serif'],
+                        script: ['Great Vibes', 'cursive'],
+                        sinhala: ['Noto Sans Sinhala', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="text-slate-900 antialiased bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center relative">
+                    <!-- Soft Background Glow -->
+                    <div class="absolute -left-4 -top-4 w-24 h-24 bg-pink-100 rounded-full blur-2xl opacity-70 -z-10">
+                    </div>
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="brand-logo.png" alt="Logo" class="h-12 w-12 object-contain rounded-lg shadow-sm">
+                        <div class="flex flex-col">
+                            <span class="font-heading font-bold text-xl text-slate-900 tracking-tight leading-none">For
+                                You</span>
+                            <span class="font-heading font-normal text-sm text-slate-600 tracking-wide">Gift Shop</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-12 items-center">
+                    <a href="index.html"
+                        class="text-sm uppercase tracking-widest hover:text-brand-500 transition-colors">Home</a>
+                    <a href="products.html"
+                        class="text-sm uppercase tracking-widest hover:text-brand-500 transition-colors">Shop</a>
+                    <a href="#about"
+                        class="text-sm uppercase tracking-widest hover:text-brand-500 transition-colors">About</a>
+                    <a href="#contact"
+                        class="text-sm uppercase tracking-widest hover:text-brand-500 transition-colors">Contact</a>
+
+                    <div class="flex items-center space-x-6 text-xl">
+                        <a href="#" class="hover:text-brand-500 transition-colors"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                        <div class="relative group">
+                            <a href="cart.html" class="relative hover:text-brand-500 transition-colors">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span id="cart-count"
+                                    class="absolute -top-1 -right-2 bg-brand-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-900 hover:text-brand-500 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-md absolute w-full left-0 top-20 shadow-lg border-t border-slate-100">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html"
+                    class="block px-3 py-2 text-brand-600 font-semibold rounded-md bg-brand-50">Home</a>
+                <a href="products.html"
+                    class="block px-3 py-2 text-slate-600 hover:text-brand-600 hover:bg-slate-50 rounded-md">Shop
+                    All</a>
+                <a href="cart.html"
+                    class="block px-3 py-2 text-slate-600 hover:text-brand-600 hover:bg-slate-50 rounded-md">My Cart</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-0 lg:min-h-screen flex items-center overflow-hidden">
+        <div class="max-w-[1400px] mx-auto w-full grid lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
+
+            <!-- Left Text Content -->
+            <div class="lg:pl-12 relative z-10 order-2 lg:order-1">
+                <span
+                    class="font-script text-5xl md:text-7xl text-brand-500 block mb-4 transform -rotate-2 origin-bottom-left">For
+                    You Gifts</span>
+                <h1 class="font-sinhala font-bold text-lg md:text-xl lg:text-2xl text-gray-900 mb-8 whitespace-nowrap">
+                    හිතේ තියෙන හැඟීම් තෑගි කරන්න.
+                </h1>
+                <p class="text-gray-500 text-lg md:max-w-md leading-relaxed mb-10 font-light">
+                    If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                    embarrassing hidden in the middle of text.
+                </p>
+
+                <div class="flex items-center gap-4">
+                    <a href="products.html"
+                        class="group bg-gray-900 text-white px-10 py-4 rounded-full hover:bg-brand-500 transition-all duration-300 flex items-center gap-3">
+                        <span class="uppercase tracking-widest text-sm font-medium">Shop Now</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image Content -->
+            <div class="relative order-1 lg:order-2 h-[50vh] lg:h-auto">
+                <div
+                    class="absolute inset-0 bg-gradient-to-l from-brand-50 to-transparent rounded-l-[100px] -z-10 w-[120%] h-full right-[-20%]">
+                </div>
+                <!-- Using the uploaded image structure concept (Pink envelope with flowers) -->
+                <img src="images/hero-bg.png" alt="Flowers in Envelope"
+                    class="w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700">
+
+                <!-- Floating Element Decor -->
+                <div
+                    class="absolute top-10 right-10 w-32 h-32 border-4 border-brand-200 rounded-full animate-spin-slow opacity-50">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-slate-900 text-center mb-12">Curated Collections</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Category Cards -->
+                <a href="products.html?category=giftboxes"
+                    class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all">
+                    <!-- Placeholder BG -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-50 to-white"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform text-brand-500 text-2xl">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Gift Boxes</h3>
+                        <p class="text-sm text-slate-500">Curated sets</p>
+                    </div>
+                </a>
+
+                <a href="products.html?category=flowers"
+                    class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all">
+                    <div class="absolute inset-0 bg-gradient-to-br from-rose-50 to-white"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform text-rose-500 text-2xl">
+                            <i class="fa-solid fa-fan"></i> <!-- Flower icon alternative -->
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Flowers</h3>
+                        <p class="text-sm text-slate-500">Fresh bouquets</p>
+                    </div>
+                </a>
+
+                <a href="products.html?category=chocolates"
+                    class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all">
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-50 to-white"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform text-amber-600 text-2xl">
+                            <i class="fa-solid fa-candy-cane"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Chocolates</h3>
+                        <p class="text-sm text-slate-500">Famous brands</p>
+                    </div>
+                </a>
+
+                <a href="products.html?category=teddybears"
+                    class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 to-white"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform text-indigo-500 text-2xl">
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Teddy Bears</h3>
+                        <p class="text-sm text-slate-500">Soft & Cuddly</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-serif font-bold text-brand-600 mb-4">For You.</h2>
+            <p class="text-slate-500 mb-6">Making your special moments unforgettable.</p>
+            <div class="flex justify-center space-x-6 text-slate-400">
+                <a href="#" class="hover:text-brand-500 transition-colors"><i
+                        class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-brand-500 transition-colors"><i
+                        class="fa-brands fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-brand-500 transition-colors"><i
+                        class="fa-brands fa-tiktok text-xl"></i></a>
+            </div>
+            <p class="text-slate-400 text-sm mt-8">&copy; 2024 For You Gift Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

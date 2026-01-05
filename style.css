@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+    /* Pure white for the new look */
+}
+
+/* Typography from reference */
+.font-script {
+    font-family: 'Great Vibes', cursive;
+}
+
+.font-display {
+    font-family: 'Prata', serif;
+}
+
+/* Glassmorphism utilities */
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    /* Slightly more opaque for better readability */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.text-primary {
+    color: #0EA5E9;
+}
+
+.bg-primary {
+    background-color: #0EA5E9;
+}
+
+.btn-primary {
+    @apply bg-primary text-white px-8 py-3 rounded-full hover:bg-sky-600 transition-all shadow-lg hover:shadow-sky-200 hover:-translate-y-0.5 font-medium tracking-wide;
+}
+
+.card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+}
