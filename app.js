@@ -88,6 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cartItemsContainer) {
         renderCart();
     }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 });
 
 // Render Products
